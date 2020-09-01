@@ -1,135 +1,237 @@
-// Custom Scripts for Primal Template //
+/*------------------------------------------------------------------
+    Template Name:  HoomPotact
+    Version: 1.0
+    Author: Layerdrops
+    Author Email: layerdrops@gmail.com
 
-jQuery(function($) {
-    "use strict";
+    [Table of Content]
+    -01 PreLoader
+    -02 Header Slider
+    -03 Fixed Nav
+    -04 Toggle Nav Menu
+    -05 Lightbox
+    -06 CounterUP
+    -07 Custom Radio Button
+    -08 Header Sliders
+    -09 Testimonial Slider
+    -10 Service Slider
+    -11 Clients Logos
+    -12 Google Maps
+*/
 
+(function ($) {
+    'use strict';
 
-        // get the value of the bottom of the #main element by adding the offset of that element plus its height, set it as a variable
-        var mainbottom = $('#main').offset().top;
-
-        // on scroll,
-        $(window).on('scroll',function(){
-
-        // we round here to reduce a little workload
-        stop = Math.round($(window).scrollTop());
-        if (stop > mainbottom) {
-            $('.navbar').addClass('past-main');
-            $('.navbar').addClass('effect-main')
-        } else {
-            $('.navbar').removeClass('past-main');
-       }
-
-      });
-
-
-  // Collapse navbar on click
-
-   $(document).on('click.nav','.navbar-collapse.in',function(e) {
-    if( $(e.target).is('a') ) {
-    $(this).removeClass('in').addClass('collapse');
-   }
-  });
-
-
-
-    /*-----------------------------------
-    ----------- Scroll To Top -----------
-    ------------------------------------*/
-
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 1000) {
-          $('#back-top').fadeIn();
-      } else {
-          $('#back-top').fadeOut();
-      }
-    });
-    // scroll body to 0px on click
-    $('#back-top').on('click', function () {
-      $('#back-top').tooltip('hide');
-      $('body,html').animate({
-          scrollTop: 0
-      }, 1500);
-      return false;
+    /*** =====================================
+     * -01 PreLoader
+     * =====================================***/
+    $(window).on('load', function(){
+        $('.spinner').delay('300').fadeOut(2000);
+        $('.header_svg_home').delay('500').addClass('active');
     });
 
+    $(document).on('ready', function () {
 
+        /*** =====================================
+         * -02 Header Slider
+         * =====================================***/
+        if($(".scroll_fixed").length) {
+            const nav = document.querySelector('.scroll_fixed');
+            const topOfNav = nav.offsetTop;
 
-
-
-  /*-------- Owl Carousel ---------- */
-    $(".rev-list").owlCarousel({
-
-      slideSpeed : 200,
-      items: 1,
-      singleItem: true,
-      autoPlay : true,
-      pagination : false
-      });
-
-
-
-
-    /* ------ jQuery for Easing min -- */
-
-      // Smooth scrolling using jQuery easing
-      $('a.js-scroll-trigger[href*="#"]:not([href="#"])').on('click', function () {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-          if (target.length) {
-            $('html, body').animate({
-              scrollTop: (target.offset().top - 54)
-            }, 1000, "easeInOutExpo");
-            return false;
-          }
-        }
-      });
-
-
-/* --------- Wow Init ------ */
-
-  new WOW().init();
-
-
-  /* ----- Counter Up ----- */
-
-$('.counter').counterUp({
-		delay: 10,
-		time: 1000
-});
-
-
-/*----- Subscription Form ----- */
-/*----- Subscription Form ----- */
-
-   $(document).ready(function() {
-        // jQuery Validation
-        $("#chimp-form").validate({
-            // if valid, post data via AJAX
-            submitHandler: function(form) {
-                $.post("assets/php/subscribe.php", { email: $("#chimp-email").val() }, function(data) {
-                    $('#response').html(data);
-                });
-            },
-            // all fields are required
-            rules: {
-                email: {
-                    required: true,
-                    email: true
+            function fixNav() {
+                if (window.scrollY >= topOfNav) {
+                    document.body.style.paddingTop = nav.offsetHeight + 'px';
+                    document.body.classList.add('fixed-nav');
+                } else {
+                    document.body.style.paddingTop = 0;
+                    document.body.classList.remove('fixed-nav');
                 }
             }
+
+            window.addEventListener('scroll', fixNav);
+        }
+
+        /*** =====================================
+         * -03 Fixed Nav
+         * =====================================***/
+         if($(".scrolling_fixed").length) {
+             $(window).bind('scroll', function () {
+                 if ($(window).scrollTop() > 50) {
+                     $('.scrolling_fixed').addClass('fixed');
+                 } else {
+                     $('.scrolling_fixed').removeClass('fixed');
+                 }
+             });
+         }
+
+        /*** =====================================
+         * -04 Toggle Nav Menu
+         * =====================================***/
+        $(document).on('click','.main_menu_area .navbar-nav li > .menu_icon:not(:only-child)', function (e) {
+            $(this).siblings('.highlight_dropdown').toggle();
+            $('.highlight_dropdown').not($(this).siblings()).hide();
+            e.stopPropagation();
         });
+        $(document).on('click', '.main_menu_area .navbar-toggles', function () {
+            $(".header_area .main_menu_area .collapse_responsive").toggleClass('active');
+        });
+        $(document).on('click', '.header_area .main_menu_area .collapse_responsive .close_menu_area_btn', function () {
+            $(".header_area .main_menu_area .collapse_responsive").removeClass('active');
+        });
+
+        /*** =====================================
+         * -05 Lightbox
+         * =====================================***/
+        if($(".lightbox").length) {
+            $('.lightbox').topbox({
+                effect: 'fade',
+            });
+        }
+
+        /*** =====================================
+         * -06 CounterUP
+         * =====================================***/
+         if($(".counterup").length) {
+             $('.counterup').counterUp({
+                 delay: 10,
+                 time: 3000
+             });
+         }
+
+        /*** =====================================
+         * -07 Custom Radio Button
+         * =====================================***/
+         if($(".custom_radio_btn").length) {
+            $(document).on('click', '.custom_radio_btn.radio_1 li', function () {
+                $(".custom_radio_btn.radio_1 li").removeClass('active');
+                $(this).addClass('active');
+            });
+            $(document).on('click', '.custom_radio_btn.radio_3 li', function () {
+                $(".custom_radio_btn.radio_3 li").removeClass('active');
+                $(this).addClass('active');
+            });
+            $(document).on('click', '.custom_radio_btn.radio_2 li', function () {
+                $(".custom_radio_btn.radio_2 li").removeClass('active');
+                $(this).addClass('active');
+            });
+         }
+
+        /*** =====================================
+         * -08 Header Sliders
+         * =====================================***/
+         if($(".header_slider").length) {
+             $('.header_slider').owlCarousel({
+                 items: 1,
+                 autoHeight: true,
+                 autoplay: true,
+                 loop: true,
+                 nav: false,
+                 dots: false,
+                 slideSpeed: 1000,
+                 animateOut: 'fadeOut',
+                 animateIn: 'fadeIn',
+                 autoplayTimeout: 7000,
+             });
+         }
+         if($(".header_slider_style_2").length) {
+             $('.header_slider_style_2').owlCarousel({
+                 items: 1,
+                 autoHeight: true,
+                 autoplay: true,
+                 loop: true,
+                 nav: true,
+                 navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+                 dots: false,
+                 slideSpeed: 1000,
+                 animateOut: 'fadeOut',
+                 animateIn: 'fadeIn',
+                 autoplayTimeout: 7000,
+             });
+         }
+
+        /*** =====================================
+         * -09 Testimonial Slider
+         * =====================================***/
+         if($(".testimonial_sliders").length) {
+             $('.testimonial_sliders').owlCarousel({
+                 items: 1,
+                 autoHeight: true,
+                 autoplay: true,
+                 loop: true,
+                 nav: false,
+                 dots: true,
+                 slideSpeed: 1000,
+                 animateOut: 'fadeOut',
+                 animateIn: 'fadeIn',
+                 autoplayTimeout: 6000,
+             });
+         }
+
+        /*** =====================================
+         * -10 Service Slider
+         * =====================================***/
+         if($(".service_slider").length) {
+             $('.service_slider').owlCarousel({
+                 autoHeight: true,
+                 autoplay: true,
+                 loop: true,
+                 nav: true,
+                 navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+                 autoplayTimeout: 4000,
+                 dots: false,
+                 margin: 30,
+                 responsive: {
+                     0: {
+                         items: 1,
+                     },
+                     600: {
+                         items: 1,
+                     },
+                     1000: {
+                         items: 3,
+                     }
+                 }
+             });
+         }
+
+        /*** =====================================
+         * -11 Clients Logos
+         * =====================================***/
+         if($(".client_slider").length) {
+             $('.client_slider').owlCarousel({
+                 autoHeight: true,
+                 autoplay: true,
+                 loop: true,
+                 nav: false,
+                 autoplayTimeout: 3000,
+                 dots: false,
+                 responsive: {
+                     0: {
+                         items: 1,
+                     },
+                     600: {
+                         items: 3,
+                     },
+                     1000: {
+                         items: 5,
+                     }
+                 }
+             });
+         }
+
+
+        /*** =====================================
+         * -12 Google Maps
+         * =====================================***/
+         if($("#map").length) {
+             initMap('map', 40.712776, -74.005974, 'assets/images/map-marker.png');
+         }
+         if($("#map_style_two").length) {
+             initMap('map', 40.717499, -74.044113, 'assets/images/map-marker.png');
+         }
+
     });
 
 
-// Accordion //
-
-function toggleChevron(e) {
-   $(e.target)
-     .prev('.panel-heading')
-     .find("span.glyphicon")
-     .toggleClass('glyphicon-chevron-down glyphicon-chevron-right');
- }
- $('#accordion').on('hide.bs.collapse show.bs.collapse', toggleChevron);
-
-});
+})(jQuery);
