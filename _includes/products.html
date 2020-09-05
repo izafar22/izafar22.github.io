@@ -1,38 +1,16 @@
 <div class="container">    
     <div class="row">
-        <h1> OUR PRODUCTS</h1>
+        <h1> Products </h1>
+      {% for item in site.data.productsData %}
       <div class="col-sm-3">
         <div class="panel panel-primary">
-            <a href="#"> <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                <div class="panel-body"><img src="../assets/images/sliders/IOTTY_CLOSE-SUBWALL-GENERIC_HIGH_07b2a254-0f3e-4a30-bcf3-ac6ba41b4f5a_1512x.webp" class="img-responsive" style="width:100%" alt="Image"></div>
-                <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+            <a href="#"> <div class="panel-heading">{{ item.header }}</div>
+                <div class="panel-body"><img src="{{ item.src }}" class="img-responsive" style="width:100%" alt="{{ item.alt }}"></div>
+                <div class="panel-footer">{{ item.footer }}</div>
               </div></a>
          
       </div>
-      <div class="col-sm-3">
-        <div class="panel panel-primary">
-            <a href="#"> <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                <div class="panel-body"><img src="../assets/images/sliders/IOTTY_CLOSE-SUBWALL-GENERIC_HIGH_07b2a254-0f3e-4a30-bcf3-ac6ba41b4f5a_1512x.webp" class="img-responsive" style="width:100%" alt="Image"></div>
-                <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-              </div></a>
-         
-      </div>
-      <div class="col-sm-3">
-        <div class="panel panel-primary">
-            <a href="#"> <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                <div class="panel-body"><img src="../assets/images/sliders/IOTTY_CLOSE-SUBWALL-GENERIC_HIGH_07b2a254-0f3e-4a30-bcf3-ac6ba41b4f5a_1512x.webp" class="img-responsive" style="width:100%" alt="Image"></div>
-                <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-              </div></a>
-         
-      </div>
-      <div class="col-sm-3">
-        <div class="panel panel-primary">
-            <a href="#"> <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                <div class="panel-body"><img src="../assets/images/sliders/IOTTY_CLOSE-SUBWALL-GENERIC_HIGH_07b2a254-0f3e-4a30-bcf3-ac6ba41b4f5a_1512x.webp" class="img-responsive" style="width:100%" alt="Image"></div>
-                <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-              </div></a>
-         
-      </div>
+      {% endfor %}
     </div>
   </div><br>
   

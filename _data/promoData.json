@@ -1,0 +1,17 @@
+[
+  {
+    "src": "https://placehold.it/150x80?text=IMAGE",
+    "alt": "Image",
+    "description": "Current Project"
+  },
+  {
+    "src": "https://placehold.it/150x80?text=IMAGE",
+    "alt": "Image",
+    "description": "Project 1"
+  },
+  {
+    "src": "https://placehold.it/150x80?text=IMAGE",
+    "alt": "Image",
+    "description": "Project 2"
+  }
+]
