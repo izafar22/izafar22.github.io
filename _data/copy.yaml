@@ -1,0 +1,22 @@
+- class: active
+  src: assets/images/sliders/IOTTY_CLOSE-SUBWALL-BEDROOM_HIGH_1512x.webp
+  alt: Los Angeles
+  description: MOXUAL SMART HOME
+- class:  
+  src: assets/images/sliders/IOTTY_CLOSE-SUBWALL-GENERIC_HIGH_07b2a254-0f3e-4a30-bcf3-ac6ba41b4f5a_1512x.webp
+  alt: Chicago
+  description: MOXUAL SMART HOTEL
+- class:
+  src: assets/images/sliders/IOTTY_DUSK-SUBWALL-BATHROOM_HIGH_1512x.webp
+  alt: New York
+  description: MOXUAL COMING SOON   
+- name: Home
+  link: /
+- name: About
+  link: /about.html
+- name: Products
+  link: /blog.html
+- name: Blog
+  link: /blog.html
+- name: Contact Us
+  link: /staff.html
