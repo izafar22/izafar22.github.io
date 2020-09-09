@@ -1,11 +1,11 @@
 - link: #
-  class: fa fa-twitter
+  class: fa fa-twitter fa-2x
 - link: #
-  class: fa fa-facebook
+  class: fa fa-facebook fa-2x
 - link: #
-  class: fa fa-linkedin
+  class: fa fa-linkedin fa-2x
 - link: #
-  class: fa fa-youtube
+  class: fa fa-youtube fa-2x
 - name: Home
   link: /
 - name: About

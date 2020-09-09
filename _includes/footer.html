@@ -13,8 +13,12 @@
                                 <img class="small--hide" src="../assets/images/logo.png" alt="iotty Smart Home" itemprop="logo">
                                
                               </a>
-                    <div class="footer-text">  <p>MOXUAL is committed to providing every home and family with innovative, dependable, and affordable home security solutions.</p>
-  <i class="fab fa-500px"></i>
+                    <div class="">  
+                        <ul class="social_link">
+                            {% for item in site.data.footerNavigation %}
+                            <li><a href="{{ item.link }}"><i class="{{ item.class }}"></i></a></li>
+                            {% endfor %}
+                        </ul>
 
                         </div>
                        
