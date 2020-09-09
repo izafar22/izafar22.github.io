@@ -1,0 +1,18 @@
+- link: #
+  class: fa fa-twitter
+- link: #
+  class: fa fa-facebook
+- link: #
+  class: fa fa-linkedin
+- link: #
+  class: fa fa-youtube
+- name: Home
+  link: /
+- name: About
+  link: /about.html
+- name: Products
+  link: /blog.html
+- name: Blog
+  link: /blog.html
+- name: Contact Us
+  link: /staff.html

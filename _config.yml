@@ -5,3 +5,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+gems:
+  - jekyll-font-awesome-sass
+font-awesome:
+  assets: true
