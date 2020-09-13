@@ -3,8 +3,8 @@
 - name: About
   link: /about.html
 - name: Products
-  link: /blog.html
+  link: /products.html
 - name: Blog
   link: /blog.html
 - name: Contact Us
-  link: /staff.html
+  link: /contacts.html

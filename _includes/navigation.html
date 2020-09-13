@@ -1,74 +1,82 @@
-<!-- <nav>
-    {% for item in site.data.navigation %}
-      <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
-        {{ item.name }}
-      </a>
-    {% endfor %}
-  </nav> -->
-  <!-- ***************************
-        Header Area Start
-     *************************** -->
-     <header class="header_area">
-        <div class="header-item header-item--logo">
-                
-  
+<header class="header_area">
+    <div class="header-item header-item--logo">
 
-    
-          
+
+
+
+
+
+
+        <br> <br>
+
+
+
+        <a href="/" itemprop="url" class="site-header__logo-link">
+            <img class="small--hide" src="../assets/images/logo.png" alt="iotty Smart Home" itemprop="logo">
+
+        </a>
+
+
+
+        </h1>
+
+
+
+
+
+
+
+    </div>
+    <div class="text-center">
+
+
+
+        <ul class="site-nav site-navigation medium-down--hide" role="navigation" aria-label="Primary">
+
+
+
+            <li class="site-nav__item site-nav__expanded-item">
+
+                <a href="index.html" class="site-nav__link">
+                    Home
+
+                </a>
+
+            </li>
+             
             
-                
-                  <br> <br>
-                
-                
-                  
-                  <a href="/" itemprop="url" class="site-header__logo-link">
-                    <img class="small--hide" src="../assets/images/logo.png" alt="iotty Smart Home" itemprop="logo">
-                   
-                  </a>
-                  
-                
-                
-                  </h1>
-                
-            
-              
-            
-            
-            
-            
-                          </div>
-      <div class="main_menu_area menu_style_2 scroll_fixed">
-        
-        <!--end .left_logo-->
-          <div class="middle_menu collapse_responsive text-right">
-              <span class="close_menu_area_btn">x</span>
-              <div class="collapse navbar-collapse remove_padding" id="myNavbar">
-                  <ul class="nav navbar-nav text-center">
-                     {% for item in site.data.navigation %}
-                      <li>
-                          <a href="{{ item.link }}">{{ item.name }} </a>
-                         
-                      </li>
-                      <!-- <li><a href="about.html">About</a></li>
-                      <li><a href="service.html">Our Services</a></li> -->
-                      <!-- <li class="drop_list">
-                          <a href="">Pages</a> <span class="menu_icon fa fa-angle-down"></span>
-                          <ul class="highlight_dropdown">
-                             <li><a href="pricing.html">Plans & Pricing</a></li>
-                             <li><a href="pro-installation.html">Pro Installation</a></li>
-                             <li><a href="blog.html">Blog</a></li>
-                             <li><a href="blog-details.html">Single Blog</a></li>
-                              <li><a href="404.html">404</a></li>
-                          </ul>
-                      </li> -->
-                      <!-- <li><a href="contact.html">Contact</a></li> -->
-                      {% endfor %}
-                  </ul>
-              </div><!--end .collapse-->
-          </div><!--end .middle_menu-->
-         
-      </div><!--end .main_menu_area-->
-  </header><!--end .header_area-->
- <!-- ***************************
-     Header Area End
-  *************************** -->
+            <li class="site-nav__item site-nav__expanded-item">
+
+                <a href="/about.html" class="site-nav__link">
+                    About Us
+
+                </a>
+
+            </li>
+
+
+            <li class="site-nav__item site-nav__expanded-item">
+
+                <a href="/products.html" class="site-nav__link">
+                    Products
+
+                </a>
+
+            </li>
+
+
+
+
+
+            <li class="site-nav__item site-nav__expanded-item">
+
+                <a href="/contacts.html" class="site-nav__link">
+                    Contact Us
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </div>
