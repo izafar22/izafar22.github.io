@@ -1,17 +1,8 @@
 .current {
     color: green;
   }
-
-  /*------------------------------------------------------------------
-
-    Template Name:  HoomPotact
-    Author: Layerdrops
-    Author Email: Layerdrops@gmail.com
-    License: GPL V2 or Later
-    License URI: http://www.gnu.org/licenses/gpl-2.0.html
-    Version: 1.0
-*/
-
+  @import url(//db.onlinewebfonts.com/c/1daa609fdca8da38e5bcbb12c2a987db?family=DINNextW01-Regular);
+ 
 /*========================================================================
     Index
     ------------------------------------------------------------------------
@@ -76,13 +67,22 @@ $light_gray: #7c7f82;
 
 /*Fonts*/
 //$ubuntu: 'Ubuntu', sans-serif;
-@font-face {
-  font-family: 'dinnext';
-  src:  url('../assets/font/dinnext.woff2') format('woff2'),
+// @font-face {
+//   font-family: dinnext;
+//   src:  url(/css/fonts/dinregular.woff2) ;
+//   src:  url(/fonts/dinregular.ttf) ;
+//    src:  url(/fonts/dinregular.woff) ;
+  
+//   font-weight: bold;
         
-}
+// }
+// @font-face {
+//   font-family: myFirstFont;
+//   src: url(sansation_bold.woff);
+  
+// }
 
-
+@font-face {font-family: "dinnext"; src: url("//db.onlinewebfonts.com/t/1daa609fdca8da38e5bcbb12c2a987db.eot"); src: url("//db.onlinewebfonts.com/t/1daa609fdca8da38e5bcbb12c2a987db.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/1daa609fdca8da38e5bcbb12c2a987db.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/1daa609fdca8da38e5bcbb12c2a987db.woff") format("woff"), url("//db.onlinewebfonts.com/t/1daa609fdca8da38e5bcbb12c2a987db.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/1daa609fdca8da38e5bcbb12c2a987db.svg#DINNextW01-Regular") format("svg"); }
 /* ------------
 	Mixin
 ------------*/
@@ -210,10 +210,10 @@ body {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
-  font-weight: 400;
+  font-weight: 800;
   font-size: 16px;
   line-height: 30px;
-  font-family: dinnext;
+  font-family: "dinnext",sans-serif !important;
 }
 video {
   width: 650px;
@@ -5363,12 +5363,12 @@ section {
   overflow-x: hidden !important;
   overflow-y: hidden !important;
   @media #{$small_desktop, $laptop_device_2, $ipad_device, $lg_mobile, $mobile_device_xs, $mobile_device, $mobile_device_xs2} {
-    overflow-y: hidden !important;
-    overflow-x: scroll !important;
+  //  overflow-y: hidden !important;
+  //  overflow-x: scroll !important;
   }
   @media #{$large_desktop, $large_desktop_2} {
-    overflow-x: hidden !important;
-    overflow-y: hidden !important;
+ //   overflow-x: hidden !important;
+ //   overflow-y: hidden !important;
   }
   .house {
     position: absolute;
@@ -7016,6 +7016,7 @@ section {
       margin-left: 25px;
       a {
         color:black;
+        background-color: #000;
         &:hover {
           color: yellowgreen;
         }
@@ -7046,6 +7047,13 @@ section {
      }
 }
 
+//
+.footer_style_2 .widget_with_logo a{
+  color:#000 ;
+}
+.footer_style_2 .widget_with_logo a :hover{
+  color: yellowgreen;
+}
 
 /* ========================
   Responsive Layout
@@ -7359,13 +7367,14 @@ section {
   color: #919296
 }
 .site-header--heading-style .site-nav__link {
-  font-family: 'Muli', sans-serif;
+  font-family: 'dinnext', sans-serif;
   font-weight: 400;
   letter-spacing: 0.075em;
   line-height: 1.3
 }
 .site-nav__link:hover {
-  color: #919296
+  color: #919296;
+  text-decoration:none;
 }
 .is-light .site-nav__link {
   color: #fff
@@ -7640,7 +7649,7 @@ section {
 }
 .mobile-nav__sublist .mobile-nav__link,
 .mobile-nav__sublist .mobile-nav__faux-link {
-  font-family: 'DIN Next', sans-serif;
+  font-family: 'dinnext', sans-serif;
   letter-spacing: 0.025em;
   line-height: 1.6;
   font-weight: normal;
@@ -8008,6 +8017,10 @@ background-color: #fff !important;
     padding-left: 0;
   }
 }
+.quickcall{
+  display: none;
+}
+
 
 @media only screen and (max-width: 767px){
 .social-links {
@@ -8020,7 +8033,15 @@ background-color: #fff !important;
     padding: 16px 157px 21px;
     border: 1px solid rgba(0,0,0,0.05);
     border-right: none;
-    background-color: #00bcd4;
+    background-color: #000;
+}
+.quickcall{
+  display: block;
+  font-weight:bolder ;
+ 
+}
+.quickcall a{
+  text-decoration: none;
 }
 }
 .ny_cp_xx1_z{
@@ -8073,4 +8094,8 @@ background-color: #fff !important;
 
 .my-float{
 	margin-top:16px;
+}
+
+.site-nav__link :hover.focus{
+text-decoration: none !important;
 }
