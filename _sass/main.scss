@@ -7374,7 +7374,7 @@ section {
 }
 .site-nav__link:hover {
   color: #919296;
-  text-decoration:none;
+  text-decoration: none;
 }
 .is-light .site-nav__link {
   color: #fff
@@ -7705,7 +7705,14 @@ section {
 
 }
 .abcd{
-  background: url("../images/video-promotion-bg.webp") center center no-repeat;
+ // background: url("../images/video-promotion-bg.webp") center center no-repeat;
+
+ // height: 400px;
+  background-image: url('../images/video-promotion-bg.webp');
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
    // background-size: cover;
    // width: 100%;
 }
@@ -8051,6 +8058,14 @@ background-color: #fff !important;
 .ny_cp_xx1_y{
   width: 50%;
 }
+
+// .abcd{
+//   background-size: contain ;
+
+// }
+.background-media-text__text{
+
+}
 // .floating-button {
 //   background-color: rgba(56,56,56,.66);
 //   transform: rotate(-90deg);
@@ -8098,4 +8113,76 @@ background-color: #fff !important;
 
 .site-nav__link :hover.focus{
 text-decoration: none !important;
+}
+
+.background-media-text__text {
+  text-align: left;
+  background: #fff;
+  padding: 40px;
+  width: 380px;
+}
+.quick_links li a{
+  font-size: larger;
+  font-weight: bolder;
+}
+// .swiper-wrapper{
+//   width: 5%;
+// }
+
+.xyz{
+  color: #333;
+  background-color: #e3ff22;
+  border-color: #ccc;
+  width: 40%;
+  /* height: 53%; */
+  font-size: larger;
+  box-shadow: 3px 2px black;
+  
+}
+
+.cp_xx h2{
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px; 
+}
+
+.responsive {
+  width: 100% !important;
+ // max-width: 400px;
+  height: auto !important;
+}
+
+@media only screen and (max-width: 467px){
+  .nj{
+    margin-left: 25%;
+  }
+  .abcd{
+    background-size: contain;
+  }
+  .installation_left{
+    display: none;
+  }
+  .quick_links{
+    margin-left: 12%;
+  }
+  
+}
+
+.contact__number{
+  text-decoration: none;
+ }
+
+.contact__number:hover{
+ text-decoration: none;
+}
+
+
+.footer__copyright{
+  text-align: center;
+    vertical-align: middle;
+    line-height: 368px;
+    font-weight: 5;
+    font-style: normal;
+    font-size: 13px;
+    font-style: normal!important;
 }
