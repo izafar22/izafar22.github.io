@@ -7107,29 +7107,17 @@ section {
   padding: 5px 20px 4px;
   font-size: 0.77778em;
   opacity: 0;
-  transition: opacity 0.75s ease 0.5s;
-  text-decoration: none;
-}
-.announcement__text:hover {
-  text-decoration: none;
+  transition: opacity 0.75s ease 0.5s
 }
 @media only screen and (min-width: 590px) {
   .announcement__text {
       text-align: center;
       padding: 6px 20px 5px;
-      font-size: 0.88889em;
-      text-decoration: none;
-  }
-  .announcement__text:hover {
-    text-decoration: none;
+      font-size: 0.88889em
   }
 }
 .announcement__text--open {
-  opacity: 1;
-  text-decoration: none;
-}
-.announcement__text--open:hover{
-  text-decoration: none;
+  opacity: 1
 }
 .announcement__link {
   display: block;
@@ -7261,7 +7249,10 @@ section {
 }
 @media only screen and (max-width: 589px) {
   .header-item--left .site-nav {
-      margin-left: -7.5px
+      margin-left: -7.5px;
+      h3 {
+        font-size: 1.6rem;
+    }
   }
 }
 .header-item--icons .site-nav {
@@ -7269,7 +7260,15 @@ section {
 }
 @media only screen and (max-width: 589px) {
   .header-item--icons .site-nav {
-      margin-right: -7.5px
+      margin-right: -7.5px;
+      h3 {
+        font-size: 1.6rem;
+    }
+  }
+  .container .text-center{
+    h3 {
+      font-size: 1.6rem;
+  }
   }
 }
 .site-header {
@@ -7279,7 +7278,10 @@ section {
 }
 @media only screen and (min-width: 590px) {
   .site-header {
-      padding: 10px 0
+      padding: 10px 0;
+      h3 {
+        font-size: 1.6rem;
+    }
   }
 }
 .header_area .main_menu_area .navbar-nav {
@@ -7376,7 +7378,8 @@ section {
   text-decoration: none;
   padding: 7.5px 15px;
   white-space: nowrap;
-  color: #919296
+  color: #919296;
+  text-decoration: none;
 }
 .site-header--heading-style .site-nav__link {
   font-family: 'dinnext', sans-serif;
@@ -7403,7 +7406,10 @@ section {
 }
 @media only screen and (max-width: 768px) {
   .site-nav__link {
-      padding: 7.5px
+      padding: 7.5px;
+      h3 {
+        font-size: 1.6rem;
+    }
   }
   .header-layout--center .site-nav__link {
       padding-left: 2px;
@@ -7443,7 +7449,10 @@ section {
 @media only screen and (max-width: 589px) {
   .site-nav__link--icon {
       padding-left:7.5px;
-      padding-right: 7.5px
+      padding-right: 7.5px;
+      h3 {
+        font-size: 1.6rem;
+    }
   }
   .site-nav__link--icon+.site-nav__link--icon {
       margin-left: -3px
@@ -7710,11 +7719,7 @@ section {
   .announcement__text {
       text-align: center;
       padding: 6px 20px 5px;
-      font-size: 0.88889em;
-      text-decoration: none;
-  }
-  .announcement__text:hover {
-    text-decoration: none;
+      font-size: 0.88889em
   }
   .site-header__logo-link, .footer_logo {
     background: cadetblue;
@@ -8263,12 +8268,10 @@ text-decoration: none !important;
 
 .num__contact {
   text-decoration: none;
-  text-decoration-color: none;
   color:black;
 }
 
-.num__contact:hover {
-  text-decoration: none;
-  text-decoration-color: none;
-  color:black;
+.num__contact:hover{
+  text-decoration:none;
+  color:grey;
 }
