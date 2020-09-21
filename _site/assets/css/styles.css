@@ -7122,3 +7122,27 @@ section {
 .num__contact:hover {
   text-decoration: none;
   color: grey; }
+
+.carousel {
+  background: #EEE; }
+
+.carousel-cell {
+  width: 100%; }
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  color: white; }
+
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: -16px !important;
+  left: 15%;
+  z-index: 10;
+  padding-top: 63px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center; }
